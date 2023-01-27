@@ -19,8 +19,8 @@
     function initPayPalButton() {
       paypal.Buttons({
         style: {
-          shape: 'pill',
-          color: 'silver',
+          shape: 'rect',
+          color: 'gold',
           layout: 'vertical',
           label: 'paypal',
           
@@ -28,7 +28,7 @@
 
         createOrder: function(data, actions) {
           return actions.order.create({
-            purchase_units: [{"description":"Lifetime access","amount":{"currency_code":"EUR","value":5}}]
+            purchase_units: [{"description":"Donation","amount":{"currency_code":"EUR","value":3}}]
           });
         },
 
