@@ -9,3 +9,24 @@
 <h1>Discord: http://invite.xenoth.top</h1>
 </body>
 </html>
+<div id="paypal-button-container-P-0VX77788V8512414FMPJ76FA"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AVlnhj7krSRSiAPm70GaU3bhelvQm1CiW44awmW2wrH1lvrPNPiY8COeAIhmwmDpL8_UKi5tVJ4wFD4y&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'silver',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-0VX77788V8512414FMPJ76FA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-0VX77788V8512414FMPJ76FA'); // Renders the PayPal button
+</script>
